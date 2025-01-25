@@ -1,10 +1,13 @@
 import type { Config } from "tailwindcss";
+import flyonui from "flyonui";
+import flyonuiPlugin from "flyonui/plugin";
 
 export default {
   content: [
     "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
+    './node_modules/flyonui/dist/js/*{js,ts,jsx,tsx,mdx}',
   ],
   theme: {
     extend: {
@@ -14,5 +17,11 @@ export default {
       },
     },
   },
-  plugins: [],
+  flyonui: {
+    themes: ['light'],
+  },
+  plugins: [
+    flyonui,
+    flyonuiPlugin
+  ],
 } satisfies Config;

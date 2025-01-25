@@ -1,25 +1,25 @@
 'use client';
+
 import { ErrorButton, PrimaryButton, WarningButton } from "@/components/Shared/Button/Button";
-import { Button } from "antd";
+import Image from "next/image";
 
 export default function Home() {
   return (
-    <main>
+    <div>
+      <div className="flex justify-center items-center my-8">
+        <Image src="/pmt-logo.svg" alt="Logo" width={100} height={100} className="size-12" />
+      </div>
       <h2 className="text-5xl content-center my-8 text-center font-bold">Welcome to project management tools</h2>
       <div className="flex justify-center space-x-4 my-8">
-        <PrimaryButton onClick={() => console.log("Hello")}>Click me</PrimaryButton>
-        <WarningButton onClick={() => console.log("Hello")}>Click me</WarningButton>
-        <ErrorButton onClick={() => console.log("Hello")}>Click me</ErrorButton>
+        <PrimaryButton type="button" onClick={() => console.log("Hello")}>Click me</PrimaryButton>
+        <WarningButton type="button" onClick={() => console.log("Hello")}>Click me</WarningButton>
+        <ErrorButton type="button" onClick={() => console.log("Hello")}>Click me</ErrorButton>
       </div>
-      <div className="flex justify-center space-x-4 my-8">
-        <Button color="danger" variant="solid">Primary</Button>
-        <Button className="bg-orange-500" type="default">Default</Button>
-        <Button type="dashed">Dashed</Button>
-        <Button type="text">Text</Button>
-        <Button type="link">Link</Button>
-        <Button type="primary" disabled={false}>Disabled</Button>
+      <div>
+        <article>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus natus alias laudantium ipsum error ratione? Iste eos sapiente nulla vero magnam odio voluptatum aspernatur. Dolore animi tenetur ea porro libero earum delectus dicta fuga iure voluptatibus, illum dignissimos, obcaecati minima dolores numquam at aut officiis maxime. Doloremque et cum eius.
+        </article>
       </div>
-
-    </main>
+    </div>
   );
 }

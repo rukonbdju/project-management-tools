@@ -22,6 +22,6 @@ export default {
   },
   plugins: [
     flyonui,
-    flyonuiPlugin
+    flyonuiPlugin,
   ],
 } satisfies Config;

@@ -3,7 +3,7 @@ import "./globals.css";
 import { Poppins } from "next/font/google";
 import FlyonuiScript from "@/components/FlyonUI/FlyonUi";
 import Image from "next/image";
-import Menus from "@/components/RightSideBar/Menus";
+import Menus from "@/components/SideMenus/Menus"
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -34,19 +34,17 @@ export default function RootLayout({
                 <p></p>
               </div>
             </div>
-            <Menus />
           </nav>
         </header>
         <div className="flex flex-row">
           <aside className="min-w-56 max-w-64 w-full h-[calc(100vh-64px)] sticky top-16 border-e overflow-y-auto p-2 aside-scroll right">
-            Left sidebar appears here
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente, mollitia veniam similique eveniet cumque eius deserunt rem ad. Nulla earum itaque
+            <Menus />
           </aside>
           <main className="w-full p-2 sm:p-3 md:p-4">{children}</main>
-          <aside className="min-w-56 max-w-64 w-full h-[calc(100vh-64px)] sticky top-16 border-s bg-gray-50 overflow-y-auto p-2">
+          {/* <aside className="min-w-56 max-w-64 w-full h-[calc(100vh-64px)] sticky top-16 border-s bg-gray-50 overflow-y-auto p-2">
             Right sidebar appears here
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente, mollitia veniam similique eveniet cumque eius deserunt rem ad.
-          </aside>
+          </aside> */}
         </div>
         <FlyonuiScript />
       </body>

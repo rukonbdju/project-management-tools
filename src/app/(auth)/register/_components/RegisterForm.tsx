@@ -1,0 +1,52 @@
+import { EnvelopeIcon, LockClosedIcon, UserIcon } from "@heroicons/react/24/outline";
+
+const RegisterForm = () => {
+    return (
+        <form className="flex flex-col gap-4 max-w-md mx-auto">
+            <div className="border-2 border-gray-400 rounded-xl flex items-center focus-within:border-indigo-500">
+                <span className="inline-block px-2">
+                    <UserIcon className='size-5' />
+                </span>
+                <input
+                    type="text"
+                    className="border-0 outline-0 py-2 w-full"
+                    placeholder="Enter name"
+                />
+            </div>
+            <div className="border-2 border-gray-400 rounded-xl flex items-center focus-within:border-indigo-500">
+                <span className="inline-block px-2">
+                    <EnvelopeIcon className='size-5' />
+                </span>
+                <input
+                    type="text"
+                    className="border-0 outline-0 py-2 w-full"
+                    placeholder="Enter email"
+                />
+            </div>
+            <div>
+                <div className="border-2 border-gray-400 rounded-xl flex items-center focus-within:border-indigo-500">
+                    <span className="inline-block px-2">
+                        <LockClosedIcon className='size-5' />
+                    </span>
+                    <input
+                        minLength={6}
+                        title="Password must be at least 6 characters long"
+                        type="text"
+                        className="border-0 outline-0 py-2 w-full"
+                        placeholder="Enter password"
+                    />
+                </div>
+                <p></p>
+            </div>
+            <div>
+                <button
+                    className="p-2.5 bg-indigo-600 text-white font-semibold rounded-xl w-full hover:bg-indigo-500 hover:text-white cursor-pointer transition-colors duration-150 disabled:bg-gray-300 disabled:border-gray-600 disabled:text-gray-600"
+                >
+                    Register
+                </button>
+            </div>
+        </form>
+    )
+}
+
+export default RegisterForm;
